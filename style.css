@@ -1,0 +1,140 @@
+/* Color Scheme */
+:root {
+    --bg-light: #e8f0fe; /* Changed background color */
+    --bg-dark: #1e1e1e;
+    --text-light: #222;
+    --text-dark: #f4f4f4;
+    --header-bg: #333;
+    --header-text: #fff;
+    --btn-delete: #ff4d4d;
+    --btn-recover: #4da6ff;
+    --btn-upload: #28a745;
+    --table-border: #666;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+.dark-mode .file-table {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+.dark-mode .toggle-btn {
+    background: var(--header-bg);
+    color: var(--header-text);
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background: var(--header-bg);
+    color: var(--header-text);
+    border: none;
+    border-radius: 5px;
+}
+
+/* Upload Form */
+form {
+    margin: 20px 0;
+}
+#uploadBtn {
+    background: var(--btn-upload);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+.head1{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Table Styling */
+.file-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.file-table th {
+    background: var(--header-bg);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.file-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #666;
+    padding: 10px;
+}
+/* Fix table row structure */
+.file-table tr {
+    display: table-row; /* Ensure rows behave correctly */
+}
+
+.file-table td {
+    display: table-cell; /* Keep each cell in a row */
+    vertical-align: middle; /* Aligns content properly */
+    padding: 12px;
+    border: 1px solid #666;
+    background: rgb(83, 241, 20);
+}
+
+/* Fix for File Name */
+.file-name {
+    display: inline-block;
+    width: 100%; /* Ensure it takes space properly */
+    word-break: break-word; /* Prevents overflow */
+}
+
+/* Action Container Fix */
+.action-container {
+    display: flex;
+    gap: 10px; /* Adds spacing between buttons */
+}
+
+.delete-btn, .recover-btn {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    width: auto;
+}
+
+.delete-btn {
+    background: var(--btn-delete);
+}
+.recover-btn {
+    background: var(--btn-recover);
+}
+
+/* Spacing between file entries */
+.file-table tr:not(:first-child) td {
+    padding-top: 12px; /* Adds space between rows */
+}

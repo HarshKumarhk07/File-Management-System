@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Preview</title>
+</head>
+<body>
+    <h2>Previewing: <span id="fileName"></span></h2>
+    <iframe id="previewFrame" width="100%" height="600px"></iframe>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const fileName = params.get("file");
+        document.getElementById("fileName").textContent = fileName;
+        document.getElementById("previewFrame").src = `uploads/${fileName}`;
+    </script>
+</body>
+</html>

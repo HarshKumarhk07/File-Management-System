@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button class="toggle-btn" onclick="toggleMode()">🌙</button>
+
+    <div class="container">
+        <h1>File Manager</h1>
+
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="fileUpload" accept="image/*, .pdf, .docx, .txt">
+            <button type="button" id="uploadBtn">Upload</button>
+        </form>
+
+        <h2>Uploaded Files</h2>
+        <table class="file-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>File Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="fileList">
+                <div class="head1">
+                <tr>
+                    <td>1</td>
+                    <td class="file-name">unit-1-2-3-notes.pdf</td>
+                    <td class="action-container"><button class="delete-btn">Delete</button></td>
+                </tr>
+                <tr><td colspan="3"><hr></td></tr>
+                <tr>
+                    <td>2</td>
+                    <td class="file-name">unit-1-2-3-notes.pdf</td>
+                    <td class="action-container"><button class="delete-btn">Delete</button></td>
+                </tr>
+                <tr><td colspan="3"><hr></td></tr>
+                <tr>
+                    <td>3</td>
+                    <td class="file-name">unit-1-2-3-notes.pdf</td>
+                    <td class="action-container"><button class="delete-btn">Delete</button></td>
+                </tr></div>
+            </tbody>
+        </table>
+
+        <h2>Deleted Files (Recoverable)</h2>
+        <table class="file-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>File Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="trashList">
+                <tr>
+                    <td>1</td>
+                    <td class="file-name">PEA-305 Syllabus.pdf</td>
+                    <td class="action-container"><button class="recover-btn">Recover</button></td>
+                </tr>
+                <tr><td colspan="3"><hr></td></tr>
+                <tr>
+                    <td>2</td>
+                    <td class="file-name">PEA-305_L3_Number system.pptx</td>
+                    <td class="action-container"><button class="recover-btn">Recover</button></td>
+                </tr>
+                <tr><td colspan="3"><hr></td></tr>
+                <tr>
+                    <td>3</td>
+                    <td class="file-name">Retractable smart pedestrian system.pdf</td>
+                    <td class="action-container"><button class="recover-btn">Recover</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <h2>Preview Files</h2>
+    <table class="file-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>File Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="previewList">
+        </tbody>
+    </table>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
