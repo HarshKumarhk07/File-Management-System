@@ -102,7 +102,7 @@ form {
     vertical-align: middle; /* Aligns content properly */
     padding: 12px;
     border: 1px solid #666;
-    background: rgb(83, 241, 20);
+    background:#28a745 ;
 }
 
 /* Fix for File Name */
